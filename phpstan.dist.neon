@@ -6,6 +6,9 @@ parameters:
 	disallowedMethodCalls:
 		-
 			method: 'Trio\Marketplaces\Application\Something\CommandDispatcher::dispatch()'
+			message: 'this is a custom message'
+			errorTip: 'this is a custom tip'
+			errorIdentifier: custom.error.id
 			disallowInInstanceOf:
 				# - Trio\Marketplaces\*
 			disallowParams:
