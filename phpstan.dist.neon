@@ -6,6 +6,8 @@ parameters:
 	disallowedMethodCalls:
 		-
 			method: 'Trio\Marketplaces\Application\Something\CommandDispatcher::dispatch()'
+			disallowInInstanceOf:
+				# - Trio\Marketplaces\*
 			disallowParams:
 				-
 					position: 1
