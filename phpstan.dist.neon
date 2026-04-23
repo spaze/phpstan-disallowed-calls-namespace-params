@@ -1,0 +1,16 @@
+parameters:
+	paths:
+		- src
+	level: max
+
+	disallowedMethodCalls:
+		-
+			method: 'Trio\Marketplaces\Application\Something\CommandDispatcher::dispatch()'
+			disallowParams:
+				-
+					position: 1
+					name: 'command'
+					typeString: 'Trio\Contracts\Marketplaces\Foo\TestMarketplaceCommand'
+
+includes:
+	- vendor/spaze/phpstan-disallowed-calls/extension.neon

@@ -1,0 +1,11 @@
+{
+    "name": "spaze/stan",
+    "require-dev": {
+        "spaze/phpstan-disallowed-calls": "^4.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trio\\": "src/"
+        }
+    }
+}
