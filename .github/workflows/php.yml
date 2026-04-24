@@ -1,0 +1,31 @@
+name: PHP Tests
+
+on: 
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.4"
+
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: "Install PHP"
+      uses: shivammathur/setup-php@v2
+      with:
+        coverage: "none"
+        php-version: "${{ matrix.php-version }}"
+
+    - name: Install dependencies
+      run: composer update --no-progress --no-interaction
+
+    - name: Run PHPStan
+      run: vendor/bin/phpstan -vvv
