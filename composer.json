@@ -1,7 +1,7 @@
 {
     "name": "spaze/stan",
     "require-dev": {
-        "spaze/phpstan-disallowed-calls": "^4.11"
+        "spaze/phpstan-disallowed-calls": "dev-main"
     },
     "autoload": {
         "psr-4": {

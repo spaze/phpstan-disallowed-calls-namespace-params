@@ -10,8 +10,8 @@ parameters:
 			errorTip: 'this is a custom tip'
 			errorIdentifier: custom.error.id
 			disallowInInstanceOf:
-				# - Trio\Marketplaces\*
-			disallowParams:
+				- Trio\Marketplaces\*
+			disallowParamsInAllowed:
 				-
 					position: 1
 					name: 'command'
