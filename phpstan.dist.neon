@@ -15,7 +15,7 @@ parameters:
 				-
 					position: 1
 					name: 'command'
-					typeString: 'Trio\Contracts\Marketplaces\Foo\TestMarketplaceCommand'
+					classPattern: '\Trio\Contracts\Marketplaces\*'
 
 includes:
 	- vendor/spaze/phpstan-disallowed-calls/extension.neon
